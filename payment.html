@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>payment</title>
+</head>
+	<style>
+		.payment-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.payment-container h2 {
+    color: #FFD700;
+    text-align: center;
+}
+
+.payment-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.booking-summary {
+    flex: 1;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #FFD700;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-top: 15px;
+}
+
+/* Borang (Kanan) */
+.payment-form {
+    flex: 1.5;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #FFD700;
+    font-size: 13px;
+}
+
+.btn-pay {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-pay:hover {
+    background-color: #ffffff;
+}
+		</style>
+
+<body><div class="payment-container">
+    <h2>Secure Payment</h2>
+    <p>Finalize your booking for Bellwood Hotel</p>
+
+    <div class="payment-wrapper">
+        <div class="booking-summary">
+            <h4>Booking Summary</h4>
+            <div class="summary-item">
+                <span>Room Type:</span>
+                <strong>Deluxe Room</strong>
+            </div>
+            <div class="summary-item">
+                <span>Duration:</span>
+                <strong>2 Nights</strong>
+            </div>
+            <hr>
+            <div class="total-price">
+                <span>Total Amount:</span>
+                <span class="amount">RM1,100</span>
+            </div>
+        </div>
+
+        <form class="payment-form">
+            <label>Cardholder Name</label>
+            <input type="text" class="hotel-input" placeholder="Nama pada kad">
+
+            <label>Card Number</label>
+            <input type="text" class="hotel-input" placeholder="1234 5678 9101 1121">
+
+            <div class="input-row">
+                <div style="width: 50%;">
+                    <label>Expiry Date</label>
+                    <input type="text" class="hotel-input" placeholder="MM/YY">
+                </div>
+                <div style="width: 45%;">
+                    <label>CVV</label>
+                    <input type="text" class="hotel-input" placeholder="123">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-pay">Confirm & Pay Now</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
