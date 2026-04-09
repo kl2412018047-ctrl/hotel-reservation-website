@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking History - Bellwood Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('image/hotel_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .history-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+
+        h2 {
+            color: #FFD700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+
+        th {
+            background-color: #FFD700;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        tr:hover {
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+       
+        .status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .confirmed { background: #28a745; color: white; }
+        .pending { background: #ffc107; color: black; }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+	<nav class="navbar">
+    <a href="hotel_reservation.html">Home</a>
+    <a href="room-details.html">Rooms</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+    <div class="history-container">
+        <h2>Your Booking History</h2>
+		
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Room Type</th>
+                    <th>Check-In</th>
+                    <th>Check-Out</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#BH-1024</td>
+                    <td>Deluxe King Room</td>
+                    <td>12 Apr 2026</td>
+                    <td>14 Apr 2026</td>
+                    <td>RM 1,100.00</td>
+                    <td><span class="status confirmed">Confirmed</span></td>
+                </tr>
+                <tr>
+                    <td>#BH-1055</td>
+                    <td>Standard Cozy Room</td>
+                    <td>20 May 2026</td>
+                    <td>21 May 2026</td>
+                    <td>RM
