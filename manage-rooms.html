@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Rooms - Admin Bellwood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background-color: #f4f7f6;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 { color: #FFD700; text-align: center; border-bottom: 1px solid #333; padding-bottom: 20px; }
+        .sidebar a { color: #ccc; text-decoration: none; padding: 15px; border-radius: 8px; margin-bottom: 5px; }
+        .sidebar a:hover, .sidebar a.active { background-color: #FFD700; color: black; font-weight: bold; }
+
+        /* Main Content */
+        .main-content { flex: 1; padding: 30px; overflow-y: auto; }
+
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-add { background-color: #1a1a1a; color: white; }
+        .btn-edit { background-color: #0288d1; color: white; margin-right: 5px; }
+        .btn-delete { background-color: #dc3545; color: white; }
+
+        /* Room Grid */
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .room-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+        }
+
+        .room-box h3 { margin: 10px 0; font-size: 24px; color: #333; }
+        .room-box p { color: #888; margin-bottom: 20px; }
+
+        .status-tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #eee;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Modal / Pop-up Form (Hidden by default) */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 100;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+        }
+
+        .modal-content input, .modal-content select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Bellwood Admin</h2>
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="manage-booking.html">Manage Bookings</a>
+        <a href="manage-rooms.html" class="active">Manage Rooms</a>
+        <a href="reports.html">Reports</a>
+        <a href="login.html" style="margin-top: auto; color: #ff4444;">Log Out</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-actions">
+            <h1>Manage Rooms</h1>
+            <button class="btn btn-add" onclick="openModal()">+ Add New Room</button>
+        </div>
+
+        <div class="room-grid">
+            <div class="room-box">
+                <span class="status-tag" style="color: #28a745;">Available</span>
+                <h3>101</h3>
+                <p>Standard Cozy Room</p>
+                <button class="btn btn-edit" onclick="alert('Update Room 101?')">Update</button>
+                <button class="btn btn-delete" onclick="confirm('Delete Room 101?')">Delete</button>
+            </div>
+
+            <div class="room-box">
+                <span class="status-tag" style="color: #dc3545;">Occupied</span>
+                <h3>202</h3>
+                <p>Deluxe King Room</p>
+                <button class="btn btn-edit" onclick="alert('Update Room 202?')">Update</button>
+                <button class="btn btn-delete" onclick="confirm('Delete Room 202?')">Delete</button>
+            </div>
+
+            <div class="room-box">
+                <span class="status-tag" style="color: #ffc107;">Cleaning</span>
+                <h3>303</h3>
+                <p>Presidential Suite</p>
+                <button class="btn btn-edit" onclick="alert('Update Room 303?')">Update</button>
+                <button class="btn btn-delete" onclick="confirm('Delete Room 303?')">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="addRoomModal" class="modal">
+        <div class="modal-content">
+            <h2 style="margin-top: 0;">Add New Room</h2>
+            <label>Room Number</label>
+            <input type="text" placeholder="e.g. 404">
+            
+            <label>Room Type</label>
+            <select>
+                <option>Standard Cozy</option>
+                <option>Deluxe King</option>
+                <option>Presidential Suite</option>
+            </select>
+
+            <button class="btn btn-add" style="width: 100%;" onclick="closeModal()">Save Room</button>
+            <button class="btn" style="width: 100%; background: none; color: #888;" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('addRoomModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('addRoomModal').style.display = 'none'; }
+    </script>
+
+</body>
+</html>
