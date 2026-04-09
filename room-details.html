@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+    <meta charset="UTF-8">
+    <title>Our Rooms - Bellwood Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('image/hotel_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #FFD700;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .details-container {
+            display: flex;
+            align-items: center;
+            max-width: 1100px;
+            margin: 50px auto;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            gap: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .room-gallery { flex: 1; }
+        .room-info { flex: 1; text-align: left; }
+
+        .main-img {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
+            object-fit: cover;
+        }
+
+        h1 { color: #FFD700; font-size: 32px; margin: 10px 0; }
+        .price-tag { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
+
+        .amenities {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .amenities li::before {
+            content: "✔";
+            color: #FFD700;
+            margin-right: 10px;
+        }
+
+        .btn-book-now {
+            display: block;
+            background: #FFD700;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-book-now:hover { background: white; transform: scale(1.05); }
+
+        hr { border: 0; border-top: 1px solid #444; margin: 80px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <a href="hotel_reservation.html">Home</a> 
+    <a href="rooms-details.html">Our Rooms</a>
+    <a href="hotel_reservation.html">Login</a>
+</nav>
+
+    <div class="details-container">
+        <div class="room-gallery">
+            <img src="image/standard_room.png" class="main-img" alt="Standard Room">
+        </div>
+        <div class="room-info">
+            <p style="color: #888;">COZY SELECTION</p>
+            <h1>Standard Cozy Room</h1>
+            <p class="price-tag">RM290 / Night</p>
+            <p>Sesuai untuk pengembara solo atau pasangan yang mencari keselesaan pada harga bajet.</p>
+            <ul class="amenities">
+                <li>Free Wi-Fi</li>
+                <li>LED TV</li>
+                <li>Coffee Maker</li>
+                <li>Air Conditioning</li>
+            </ul>
+            <a href="booking.html" class="btn-book-now">BOOK STANDARD</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="details-container reverse">
+        <div class="room-gallery">
+            <img src="image/suite_room.png" class="main-img" alt="Deluxe Room">
+        </div>
+        <div class="room-info">
+            <p style="color: #888;">PREMIUM SELECTION</p>
+
+            <h1>Deluxe King Room</h1>
+            <p class="price-tag">RM550 / Night</p>
+            <p>Nikmati katil bersaiz King dengan reka bentuk dalaman moden yang cukup luas.</p>
+            <ul class="amenities">
+                <li>4K Smart TV</li>
+                <li>Mini Bar</li>
+                <li>Private Bathtub</li>
+                <li>Room Service</li>
+            </ul>
+            <a href="booking.html" class="btn-book-now">BOOK DELUXE</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="details-container">
+        <div class="room-gallery">
+            <img src="image/FR-Luxury-King-Night_web.jpg" class="main-img" alt="Suite Room">
+        </div>
+        <div class="room-info">
+            <p style="color: #FFD700; font-weight: bold;">THE ULTIMATE LUXURY</p>
+            <h1>Presidential Suite</h1>
+            <p class="price-tag">RM1,200 / Night</p>
+            <p>Kemewahan tanpa tandingan dengan ruang tamu peribadi dan jakuzi eksklusif.</p>
+            <ul class="amenities">
+                <li>Private Jacuzzi</li>
+                <li>Butler Service</li>
+                <li>VIP Lounge</li>
+                <li>Living Area</li>
+            </ul>
+            <a href="booking.html" class="btn-book-now">BOOK SUITE</a>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 50px; color: #888;">
+        &copy; 2026 Bellwood Hotel Luxury. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
