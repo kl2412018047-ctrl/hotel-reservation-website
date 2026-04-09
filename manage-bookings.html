@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Bookings - Bellwood Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background-color: #f4f7f6;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 { color: #FFD700; border-bottom: 1px solid #333; padding-bottom: 20px; text-align: center; }
+
+        .sidebar a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover, .sidebar a.active { background-color: #FFD700; color: black; font-weight: bold; }
+
+        /* Main Content */
+        .main-content { flex: 1; padding: 30px; overflow-y: auto; }
+
+        .header-title {
+            margin-bottom: 30px;
+            border-left: 5px solid #FFD700;
+            padding-left: 15px;
+        }
+
+        /* Table Design */
+        .table-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #eee;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Action Buttons */
+        .btn-action {
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .btn-confirm { background: #28a745; color: white; }
+        .btn-cancel { background: #dc3545; color: white; }
+        .btn-view { background: #007bff; color: white; }
+
+        .btn-action:hover { opacity: 0.8; }
+
+        .status-pill {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .pending { background: #fff3cd; color: #856404; }
+        .paid { background: #d4edda; color: #155724; }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Bellwood Admin</h2>
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="manage-booking.html" class="active">Manage Bookings</a>
+        <a href="manage-rooms.html">Manage Rooms</a>
+        <a href="index.html" style="margin-top: 50px; color: #ff4444;">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-title">
+            <h1>Guest Bookings</h1>
+            <p>Review and manage all incoming room reservations.</p>
+        </div>
+
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Guest Name</th>
+                        <th>Room Type</th>
+                        <th>Check-In</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#BK-901</td>
+                        <td><strong>Siti Aminah</strong></td>
+                        <td>Deluxe King</td>
+                        <td>12 April 2026</td>
+                        <td><span class="status-pill pending">Pending</span></td>
+                        <td>
+                            <a href="#" class="btn-action btn-confirm">Confirm</a>
+                            <a href="#" class="btn-action btn-cancel">Cancel</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#BK-882</td>
+                        <td><strong>Tan Ah Teck</strong></td>
+                        <td>Standard Cozy</td>
+                        <td>15 April 2026</td>
+                        <td><span class="status-pill paid">Confirmed</span></td>
+                        <td>
+                            <a href="#" class="btn-action btn-view">Details</a>
+                            <a href="#" class="btn-action btn-cancel">Cancel</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#BK-850</td>
+                        <td><strong>Kamal Ariffin</strong></td>
+                        <td>Presidential Suite</td>
+                        <td>18 April 2026</td>
+                        <td><span class="status-pill pending">Pending</span></td>
+                        <td>
+                            <a href="#" class="btn-action btn-confirm">Confirm</a>
+                            <a href="#" class="btn-action btn-cancel">Cancel</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
