@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home - Bellwood Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background-color: #f4f7f6;
+            height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 260px;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            color: #FFD700;
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #bdc3c7;
+            text-decoration: none;
+            padding: 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #FFD700;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .welcome-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 8px solid #FFD700;
+        }
+
+        .welcome-section h1 {
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 28px;
+        }
+
+        .welcome-section p {
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+      
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h3 {
+            margin: 0;
+            font-size: 14px;
+            color: #95a5a6;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin: 10px 0;
+        }
+
+        .stat-card .trend {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .up { color: #27ae60; }
+        .down { color: #e74c3c; }
+
+        .btn-logout {
+            margin-top: auto;
+            color: #e74c3c !important;
+            border: 1px solid #e74c3c;
+            text-align: center;
+        }
+
+        .btn-logout:hover {
+            background-color: #e74c3c !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Bellwood Admin</h2>
+        <a href="admin-homepage.html" class="active">Home Dashboard</a>
+        <a href="manage-bookings.html">Manage Bookings</a>
+        <a href="manage-rooms.html">Manage Rooms</a>
+        <a href="reports.html">Reports & Analytics</a>
+        
+        <a href="login.html" class="btn-logout">Logout System</a>
+    </div>
+
+    <div class="main-content">
+        <div class="welcome-section">
+            <h1>Welcome Back, Administrator</h1>
+            <p>Here is a quick overview of Bellwood Hotel's performance for <strong>April 2026</strong>.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Reservations</h3>
+                <div class="value">1,284</div>
+                <div class="trend up">▲ 14% increase</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Guests</h3>
+                <div class="value">86</div>
+                <div class="trend">Current occupancy</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Monthly Revenue</h3>
+                <div class="value">RM 52,400</div>
+                <div class="trend up">▲ 8% from target</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Staff On Duty</h3>
+                <div class="value">12</div>
+                <div class="trend">Across all shifts</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; color: #7f8c8d; font-size: 13px; text-align: center;">
+            &copy; 2026 Bellwood Hotel Management Suite. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
