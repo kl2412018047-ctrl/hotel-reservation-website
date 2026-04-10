@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+	<style>
+	
+.register-page {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hotel-view.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-box {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.register-header h2 {
+    color: #ffcc00; 
+    letter-spacing: 2px;
+}
+
+/* Gaya Input */
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 13px;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.input-field input::placeholder {
+    color: #ccc;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 15px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Bellwood Hotel</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body class="register-page">
+
+    <div class="register-container">
+        <div class="register-box">
+            <div class="register-header">
+                <img src="image/hotel_logo.png" alt="Bellwood Logo" class="form-logo">
+                <h2>CREATE ACCOUNT</h2>
+                <p>Join Bellwood Hotel for exclusive offers</p>
+          </div>
+
+            <form action="#">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="email" placeholder="email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Username</label>
+                    <input type="text" placeholder="username" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+<a href="hotel_reservation.html" style="text-decoration: none; display: block;">
+    <button type="button" class="btn-register" style="width: 100%; cursor: pointer;">
+        REGISTER NOW
+    </button>
+</a>
+				
+            </form>
+
+            <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+	
+
+</body>
+</html>
